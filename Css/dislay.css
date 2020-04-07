@@ -1,0 +1,11 @@
+/* Style the tab content */
+.webTab {
+  display: none;
+}
+.contain_map_gm {
+  height: 200px;
+}
+
+.contain_map_gm #map {
+  height: 100%;
+}

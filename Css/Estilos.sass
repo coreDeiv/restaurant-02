@@ -1,0 +1,427 @@
+@import _mediaQuerys.sass
+    
+// Colores
+$letterColor1: #D8E2DC
+$letterColor_hover1: rgba(216, 226, 220, .5)
+$letterColor_hover2: rgba(216, 226, 220, .7)
+$bannerColor: #222222
+$boxColor: rgba(#222222, .5)
+
+// Fuentes
+$aleo: 'Aleo', serif
+$raleway: 'Raleway', sans-serif
+$mavenPro: 'Maven Pro', sans-serif
+
+*
+    margin: 0
+    padding: 0
+html, body
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0, .4)), url(../Img/Fondo.png)
+    background-repeat: no-repeat
+    background-size: 100%
+    background-attachment: fixed
+    font-size: 18px
+    height: 100%
+    .background_color
+        width: 100%
+        height: 100%
+        .container
+            width: 80%
+            height: 100%
+            max-width: 1000px
+            margin: auto
+            .header
+                display: flex
+                justify-content: space-between
+                .links
+                    display: flex
+                    justify-content: center
+                    .link
+                        padding: 65px 55px 65px 25px
+                        font-size: .875em
+                        font-family: $raleway
+                        text-align: center
+                        color: $letterColor1
+                        animation: fadeEffect 2s
+                        &:hover
+                            cursor: pointer
+                            color: $letterColor_hover1
+                            transition: ease 0.3s all
+                        &.active
+                            text-decoration: underline
+                .banner
+                    width: 30%
+                    height: 100%
+                    display: flex
+                    justify-content: flex-end
+                    background: $bannerColor
+                    color: $letterColor1
+                    .logo
+                        width: 70%
+                        height: 100%
+                        margin: auto
+                        border-bottom: 1px solid $letterColor1
+                        img
+                            width: 100%
+            .main
+                display: flex
+                justify-content: space-between
+                color: $letterColor1
+                .tab_index
+                    display: flex
+                    justify-content: space-between
+                    .contain
+                        text-align: center
+                        margin: auto
+                        width: 68%
+                        float: left
+                        background: rgba($bannerColor, .6)
+                        border: 0.875px solid rgba(#000000, .5)
+                        animation: fadeEffect 1.5s
+                        .restaurant_contain_image
+                            width: 100%
+                            .cover_image
+                                width: 100%
+                                height: 250px
+                                padding: 2% 0
+                                margin: auto
+                                img
+                                    border: 0.875px solid rgba(#000000, .5)
+                                    width: 96%
+                                    height: 100%
+                            .image_gallery
+                                display: block
+                                width: 100%
+                                .floor_gallery
+                                    display: flex
+                                    justify-content: space-between
+                                    .sample_image
+                                        margin: 2%
+                                        width: 46%
+                                        height: 170px
+                                        border: 1px solid #000000
+                                        .food1
+                                            background-image: url(../Img/Comida1.jpg)
+                                            background-repeat: no-repeat
+                                            background-size: 100%
+                                            height: 100%
+                                            .social
+                                                .social_click                                                    
+                                                    width: 100%
+                                                    transform: translate(0, 140px)
+                                                    display: flex
+                                                    justify-content: space-around
+                                                    &:hover
+                                                        background: rgba(0,0,0, .5)
+                                                        transition: ease 0.3s all
+                                                    i
+                                                        cursor: pointer
+                                                        color: #000000
+                                                        padding: 6px
+                                                        color: $letterColor_hover1
+                                                    .fa-heart
+                                                        &:active
+                                                            color: red
+                                                            transition: ease 0.3s all
+                                                        &:focus
+                                                            color: red
+                                                    .like_image
+                                                        color: red
+                                                        transition: all 0.3s ease
+                                                    .fa-share-alt
+                                                        font-weight: normal
+                                                        &:active
+                                                            color: #000000
+                                                            transition: ease 0.3s all
+                                                        &:focus
+                                                            color: #000000
+                                        .food2
+                                            @extend .food1
+                                            background-image: url(../Img/Comida2.jpg)
+                                        .food3
+                                            @extend .food1
+                                            background-image: url(../Img/Comida3.jpg)
+                                        .food4
+                                            @extend .food1
+                                            background-image: url(../Img/Comida4.jpg)
+                        .menu_contain_data
+                            width: 96%
+                            margin: 2%
+                            .bg_image_menu
+                                background-image: url(../Img/Menu_Paper.png)
+                                background-size: 100% 100%
+                                height: 100%
+                                padding: 1%
+                                .border_image_menu
+                                    border: 1.5px dotted #C08552
+                                    margin: 0.1%
+                                    .title_menu
+                                        h2
+                                            color: rgba(#C08552, .7)
+                                            font-family: $aleo
+                                            letter-spacing: 2px
+                                            margin: 3% 0
+                                    .menu_table_data
+                                        width: 100%
+                                        .menu_data
+                                            width: 100%
+                                            display: flex
+                                            justify-content: center
+                                            margin: 3% 1%
+                                            .data_label
+                                                width: 80%
+                                                border-bottom: 1px dotted #C08552
+                                                h2
+                                                    text-align: left
+                                                    color: rgba(#C08552, .7)
+                                                    padding: 0 2%
+                                                    font-family: $raleway
+                                                    font-weight: bold
+                                                    letter-spacing: 2px
+                                                p
+                                                    text-align: left
+                                                    color: #8B7364
+                                                    padding: 2%
+                                            .price_label
+                                                width: 15%
+                                                border-bottom: 1px dotted #C08552
+                                                border-left: 1px dotted #C08552
+                                                p
+                                                    color: rgba(#C08552, .7)
+                                                    padding: 45px 0 0 0
+                        .contain_team
+                            .team_title
+                                h2
+                                    text-align: center
+                                    margin: 8% auto 0 auto
+                                    font-family: $aleo
+                                    letter-spacing: 2px
+                            .contain_team_workForce
+                                width: 80%
+                                padding: 2%
+                                margin: auto
+                                .lvl_wrkForce
+                                    width: 100%
+                                    display: flex
+                                    justify-content: space-between
+                                    margin: 8% auto
+                                    .team_img
+                                        width: 40%
+                                        margin: 1%
+                                        .img_wf1
+                                            background-image: url(../Img/Equipo1.png)
+                                            background-repeat: no-repeat
+                                            background-size: 100%
+                                            width: 100%
+                                            height: 100%
+                                        .img_wf2
+                                            @extend .img_wf1
+                                            background-image: url(../Img/Equipo2.png)
+                                        .img_wf3
+                                            @extend .img_wf1
+                                            background-image: url(../Img/Equipo3.png)
+                                        .img_wf4
+                                            @extend .img_wf1
+                                            background-image: url(../Img/Equipo4.png)
+                                            width: 245%
+                                            height: 300px
+                                    .team_desc
+                                        width: 60%
+                                        text-align: justify
+                                        margin: 1%
+                                        float: left
+                                        p
+                                            font-family: $raleway
+                                            font-size: 1em
+                                    .team_desc_2
+                                        width: 100%
+                                        @extend .team_desc
+                        .contain_slider
+                            width: 100%
+                            .nivoSlider
+                                width: 93%
+                                margin: 3% auto
+                                img
+                                    width: 100%
+                                    height: auto
+                            .nivo-html-caption
+                                font-size: 12px
+                                width: 100%
+                        .contain_map_gm
+                            width: 100%
+                            .map_image
+                                width: 93%
+                                margin: auto
+                                img
+                                    width: 100%
+                        .contain_form_contact
+                            width: 100%
+                            display: block
+                            margin: 1% auto 3% auto
+                            .name
+                                width: 90%
+                                margin: 1% auto
+                                padding: 10px 10px
+                                background: rgba(#000000, .5)
+                                outline: none
+                                border: 1px solid #000000
+                                color: #ffffff
+                                max-width: 90%
+                            .mail, .subject, .message
+                                @extend .name
+                            button
+                                background: #000                        
+                                color: #cccccc
+                                padding: 10px 30px
+                                font-family: $aleo
+                                border: 1px solid #000000
+                                opacity: .7
+                                cursor: pointer
+                    .banner_tab
+                        float: left
+                .webTab
+                    display: none
+                    .banner
+                        width: 30%
+                        height: 100%
+                        background: $bannerColor
+                        float: right
+                        .regard
+                            padding: 30px 20px
+                            h2
+                                text-align: center
+                                letter-spacing: 2px
+                                font-family: $raleway
+                                padding: 0 0 5px 0
+                            p
+                                text-align: center
+                                font-size: .75em
+                                font-family: $mavenPro
+                                padding: 5px 0 5px 0
+                        .reservations
+                            padding: 50px 20px 30px 20px
+                            text-align: center
+                            width: 90%
+                            h3
+                                text-align: center
+                                font-family: $raleway
+                                letter-spacing: 2px
+                                padding: 0 0 10px 0
+                                margin: 0
+                            input
+                                width: 83%
+                                margin: 7px 0
+                                padding: 3% 3%
+                                background: $bannerColor
+                                border: 2px solid $letterColor1
+                                outline: none
+                                text-align: left
+                                &::placeholder
+                                    color: $letterColor_hover2
+                                &:hover
+                                    background: rgba($letterColor1, .2)
+                                    cursor: pointer
+                                    transition: ease 0.3s all
+                            .btn_reserv
+                                width: 90%
+                                text-align: center
+                                background: $letterColor1
+                                color: $bannerColor
+                                &:hover
+                                    color: $letterColor1
+                                    background: rgba($letterColor1, .5)
+                                    font-weight: bold
+                                    transition: ease 0.3s all
+            .footer
+                width: 30%
+                float: right
+                background: $bannerColor
+                color: $letterColor1
+                .dir_text
+                    margin: auto
+                    width: 60%
+                    padding: 30px
+                    text-align: center
+                    font-size: .75em
+                    font-family: $mavenPro
+                    border-top: 1px solid $letterColor1
+                .media_social
+                    padding: 0 30px 
+                    text-align: center
+                    a
+                        text-decoration: none
+                        color: $letterColor1
+                        i
+                            padding: 0 10px
+                            font-size: 24px
+                            outline: none
+                            &:hover
+                                color: rgba($letterColor1, .5)
+                                transition: ease 0.3s all
+                .autor
+                    padding: 30px 30px
+                    text-align: center
+                    p
+                        font-size: 0.6em
+                        font-family: $mavenPro
+                        color: rgba($letterColor1, .3)
+            .overlay
+                background: rgba(#000000, .3)
+                position: fixed
+                top: 0
+                bottom: 0
+                left: 0
+                right: 0
+                display: flex
+                align-items: center
+                justify-content: center
+                visibility: hidden
+                &.active
+                    visibility: visible
+                .popup
+                    background: #313131
+                    box-shadow: 0 0 5px 0 rgba(#000000, .8)
+                    font-family: $mavenPro
+                    padding: 20px
+                    text-align: center
+                    width: 40%
+                    border: 1px solid #f8f8f8
+                    opacity: 0
+                    transition: .3s ease all
+                    &.active
+                        opacity: 1
+                        transition: .3s ease all
+                    .popup_close
+                        .btn_close
+                            font-size: 16px
+                            line-height: 16px
+                            display: block
+                            text-align: right
+                            color: #f8f8f8
+                            transition: .3s ease all
+                            cursor: pointer
+                            &:hover
+                                color: rgba(#f8f8f8, .5)
+                        .img_popup
+                            width: 30%
+                            margin: 0 auto 15px auto
+                            img
+                                width: 100%
+                                margin: auto
+                        .links_popup
+                            margin: 20px 0
+                            a
+                                text-decoration: none
+                                color: #f8f8f8
+                                &:hover
+                                    color: rgba(#ffffff, .8)
+                                i
+                                    font-size: 2em
+                                    margin: 0 10px
+                    .text_popup
+                        h3
+                            color: #f8f8f8
+                            margin: 0 0 15px 0
+                        p
+                            color: rgba(#f8f8f8, .8)
+                            line-height: 25px

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Restaurante 2</title>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+        <link href="https://fonts.googleapis.com/css?family=Aleo|Maven+Pro|Raleway" rel="stylesheet">
+        <link rel='stylesheet' href='Css/Estilos.css'>
+        <link rel="stylesheet" href="Css/nivo-slider.css">
+        <link rel="stylesheet" href="themes/default/default.css">
+        <link rel='stylesheet' href='Css/Normalize.css'>
+        <link rel='stylesheet' href='Css/font-awesome.min.css'>
+        <link rel='shorcut icon' type='image/png' href='IMG/Icono.png'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <script src="Js/jquery-3.3.1.min.js"></script>
+        <script src="Js/jquery.nivo.slider.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+        <script type="text/javascript">
+            $(window).on('load', function () {
+                $('#slider').nivoSlider();
+            });
+        </script>
+    </head>
+    <body>
+        <div class="background_color">
+            <div class="container">
+                <!-- Header -->
+                <div class="header">
+                    <div class="links">
+                        <div class="link" onclick="openSegment(event, 'Home')" id="defaultOpen">Inicio</div>
+                        <div class="link" onclick="openSegment(event, 'Restaurant')">Restaurante</div>
+                        <div class="link" onclick="openSegment(event, 'Menu')">Menu</div>
+                        <!-- <div class="link" onclick="openSegment(event, 'orderOnline')">Pedidos</div> -->
+                        <div class="link" onclick="openSegment(event, 'Team')">Equipo</div>
+                        <div class="link" onclick="openSegment(event, 'Contact')">Contacto</div>
+                    </div>
+                    <div class="banner">
+                        <div class="logo">
+                            <img src="Img/Logo.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contenidos -->
+                <div class="main">
+                    <!-- Inicio -->
+                    <div id="Home" class="webTab">
+                        <div class="banner">
+                            <div class="regard">
+                                <h2>Bienvenidos</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque error tenetur accusantium debitis, architecto repellendus, amet ut impedit consectetur hic aliquid accusamus iusto perferendis veniam numquam repellat reiciendis perspiciatis deserunt?</p>
+                            </div>
+                            <div class="reservations">
+                                <h3>Reservaciones</h3>
+                                <input type="text" placeholder="Fecha" id="date_reserv">
+                                <input type="text" placeholder="Hora" id="time_reserv">
+                                <input type="text" placeholder="Asistentes" id="size_reserv">
+                                <input type="button" value="Reservar" class="btn_reserv" id="booking">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Restaurante -->
+                    <div id="Restaurant" class="webTab tab_index">
+                        <div class="contain">
+                            <div class="restaurant_contain_image">
+                                <div class="cover_image">
+                                    <img src="Img/Cover_Image.png" alt="">
+                                </div>
+                                <div class="image_gallery">
+                                    <div class="floor_gallery">
+                                        <div class="sample_image">
+                                            <div class="food1">
+                                                <div class="social">
+                                                    <div class="social_click">
+                                                        <i class="fa fa-heart" aria-hidden="true" id="heart"></i>                                                    
+                                                        <a id="share_sm"><i class="fa fa-share-alt" id="share_fb"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sample_image">
+                                            <div class="food2">
+                                                <div class="social">
+                                                    <div class="social_click">
+                                                        <i class="fa fa-heart" aria-hidden="true" id="heart2"></i>                                                    
+                                                        <a id="share_sm"><i class="fa fa-share-alt" id="share_fb"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="floor_gallery">
+                                        <div class="sample_image food3">
+                                            <div class="food3">
+                                                <div class="social">
+                                                    <div class="social_click">
+                                                        <i class="fa fa-heart" aria-hidden="true" id="heart3"></i>                                                    
+                                                        <a id="share_sm"><i class="fa fa-share-alt" id="share_fb"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="sample_image food4">
+                                            <div class="food4">
+                                                <div class="social">
+                                                    <div class="social_click">
+                                                        <i class="fa fa-heart" aria-hidden="true" id="heart4"></i>                                                    
+                                                        <a id="share_sm"><i class="fa fa-share-alt" id="share_fb"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner banner_tab">
+                            <div class="regard">
+                                <h2>Restaurante</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Doloremque error tenetur accusantium debitis, architecto 
+                                    repellendus, amet ut impedit consectetur hic aliquid 
+                                    accusamus iusto perferendis veniam numquam repellat 
+                                    reiciendis perspiciatis deserunt?<br><br>Sed ut 
+                                    perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, 
+                                    eaque ipsa quae ab illo inventore veritatis et quasi 
+                                    architecto beatae vitae dicta sunt explicabo. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                        
+                    <!-- Menu -->
+                    <div id="Menu" class="webTab tab_index">
+                        <div class="contain">
+                            <div class="menu_contain_data">
+                                <div class="bg_image_menu">
+                                    <div class="border_image_menu">
+                                        <div class="title_menu">
+                                            <h2>.Menu.</h2>
+                                        </div>
+                                        <div class="menu_table_data">
+                                            <div class="menu_data">
+                                                <div class="data_label">
+                                                    <h2>Lorem ipsum</h2>
+                                                    <p>Repellendus rem soluta aut sapiente eos omnis.</p>
+                                                </div>
+                                                <div class="price_label">
+                                                    <p>$ 12.50</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu_data">
+                                                <div class="data_label">
+                                                    <h2>Dolor sit</h2>
+                                                    <p>Officiis omnis quaerat architecto excepturi.</p>
+                                                </div>
+                                                <div class="price_label">
+                                                    <p>$ 10.99</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu_data">
+                                                <div class="data_label">
+                                                    <h2>Consectetur</h2>
+                                                    <p>Omnis ut officiis aliquam quam molestias placeat alias sit.</p>
+                                                </div>
+                                                <div class="price_label">
+                                                    <p>$ 8.75</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu_data">
+                                                <div class="data_label">
+                                                    <h2>Cupiditate esse</h2>
+                                                    <p>Aut neque veritatis illo illo qui debitis porro incidunt.</p>
+                                                </div>
+                                                <div class="price_label">
+                                                    <p>$ 16.25</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu_data">
+                                                <div class="data_label">
+                                                    <h2>sapiente eum?</h2>
+                                                    <p>Et sed impedit est animi magni et voluptate assumenda.</p>
+                                                </div>
+                                                <div class="price_label">
+                                                    <p>$ 23.00</p>
+                                                </div>
+                                            </div>
+                                            <div class="menu_data">
+                                                <div class="data_label">
+                                                    <h2>commodi-per</h2>
+                                                    <p>Ab consequatur ut aut non sit deserunt quidem sint.</p>
+                                                </div>
+                                                <div class="price_label">
+                                                    <p>$ 17.63</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner banner_tab">
+                            <div class="regard">
+                                <h2>Menu</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Doloremque error tenetur accusantium debitis, architecto 
+                                    repellendus, amet ut impedit consectetur hic aliquid 
+                                    accusamus iusto perferendis veniam numquam repellat 
+                                    reiciendis perspiciatis deserunt?<br><br>Sed ut 
+                                    perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, 
+                                    eaque ipsa quae ab illo inventore veritatis et quasi 
+                                    architecto beatae vitae dicta sunt explicabo. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Pedidos en Linea -->
+                    <div id="orderOnline" class="webTab tab_index">
+                        <div class="contain">
+                            <h2>Este es el contenido de la pestaña "Pedidos en Linea"</h2>
+                        </div>
+                        <div class="banner banner_tab">
+                            <div class="regard">
+                                <h2>Pedidos en Linea</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Doloremque error tenetur accusantium debitis, architecto 
+                                    repellendus, amet ut impedit consectetur hic aliquid 
+                                    accusamus iusto perferendis veniam numquam repellat 
+                                    reiciendis perspiciatis deserunt?<br><br>Sed ut 
+                                    perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, 
+                                    eaque ipsa quae ab illo inventore veritatis et quasi 
+                                    architecto beatae vitae dicta sunt explicabo. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Equipo -->
+                    <div id="Team" class="webTab tab_index">
+                        <div class="contain">
+                            <div class="contain_team">
+                                <div class="team_title">
+                                    <h2>Nuestro Equipo de trabajo</h2>
+                                </div>
+                                <div class="contain_team_workForce">
+                                    <div class="lvl_wrkForce">
+                                        <div class="team_img">
+                                            <div class="img_wf1"><!-- Imagen Equipo 1 --></div>
+                                        </div>
+                                        <div class="team_desc">
+                                            <p>
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rerum 
+                                                natus in ipsa neque sed numquam itaque corporis, dolor omnis exercitationem 
+                                                dolorem fuga asperiores temporibus quam eius. Unde, perspiciatis facere?                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="lvl_wrkForce">
+                                        <div class="team_desc">
+                                            <p>
+                                                Repudiandae sit expedita, modi sint iusto ratione accusantium nobis quibusdam 
+                                                officiis, error numquam quaerat ab obcaecati placeat. Ipsam velit sit a 
+                                                pariatur! Dolorem voluptas assumenda. Ex soluta minus doloremque nisi sit. 
+                                                Explicabo autem quaerat.
+                                            </p>
+                                        </div>
+                                        <div class="team_img">
+                                            <div class="img_wf2"><!-- Imagen Equipo 2 --></div>
+                                        </div>
+                                    </div>
+                                    <div class="lvl_wrkForce">
+                                        <div class="team_img">
+                                            <div class="img_wf3"><!-- Imagen Equipo 1 --></div>
+                                        </div>
+                                        <div class="team_desc">
+                                            <p>
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rerum 
+                                                natus in ipsa neque sed numquam itaque corporis, dolor omnis exercitationem 
+                                                dolorem fuga asperiores temporibus quam eius. Unde, perspiciatis facere?                                                
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="lvl_wrkForce">
+                                        <div class="team_img">
+                                            <div class="img_wf4"><!-- Imagen Equipo 1 --></div>
+                                        </div>
+                                    </div>
+                                    <div class="lvl_wrkForce">
+                                        <div class="team_desc_2">
+                                            <p>
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident rerum 
+                                                natus in ipsa neque sed numquam itaque corporis, dolor omnis exercitationem 
+                                                dolorem fuga asperiores temporibus quam eius. Unde, perspiciatis facere?<br><br>
+                                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum reprehenderit 
+                                                eveniet sapiente provident rem repellendus distinctio quidem, odio quod aperiam!                                               
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner banner_tab">
+                            <div class="regard">
+                                <h2>Equipo de Trabjo</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Doloremque error tenetur accusantium debitis, architecto 
+                                    repellendus, amet ut impedit consectetur hic aliquid 
+                                    accusamus iusto perferendis veniam numquam repellat 
+                                    reiciendis perspiciatis deserunt?<br><br>Sed ut 
+                                    perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, 
+                                    eaque ipsa quae ab illo inventore veritatis et quasi 
+                                    architecto beatae vitae dicta sunt explicabo. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Contacto -->
+                    <div id="Contact" class="webTab tab_index">
+                        <div class="contain">
+                            <div class="contain_slider theme-default">
+                                <div id="slider" class="nivoSlider">
+                                    <img src="Img/Restaurant.png" alt="" title="#htmlcaption" />
+                                    <img src="Img/Restaurant2.png" alt="" title="#htmlcaption" />
+                                    <img src="Img/Restaurant3.png" alt="" title="#htmlcaption" />
+                                    <img src="Img/Restaurant4.png" alt="" title="#htmlcaption" />
+                                    <img src="Img/Restaurant5.png" alt="" title="#htmlcaption" />
+                                    <!-- <img src="Img/Lugar.png"  alt=""> -->
+                                </div>
+                                <div id="htmlcaption" class="nivo-html-caption">
+                                    Fotos originales de <a href="http://eloise.rest/" target="_blank">Eloise</a>
+                                </div>
+                            </div>
+                            <div class="contain_map_gm">
+                                <div class="map_image">
+                                    <img src="Img/Mapa.png" alt="">
+                                </div>
+                            </div>
+                            <div class="contain_form_contact">
+                                <form action="">
+                                    <input type="text" class="name" placeholder="* Nombre: " required>
+                                    <input type="mail" class="mail" placeholder="* Mail: " required>
+                                    <input type="text" class="subject" placeholder="Asunto: ">
+                                    <textarea name="" class="message" id="" cols="30" rows="10" placeholder="Mensaje: "></textarea>
+                                    <button class="btn_send" type="submit" id="send">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="banner banner_tab">
+                            <div class="regard">
+                                <h2>Team WorkForce</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                    Doloremque error tenetur accusantium debitis, architecto 
+                                    repellendus, amet ut impedit consectetur hic aliquid 
+                                    accusamus iusto perferendis veniam numquam repellat 
+                                    reiciendis perspiciatis deserunt?<br><br>Sed ut 
+                                    perspiciatis unde omnis iste natus error sit voluptatem
+                                    accusantium doloremque laudantium, totam rem aperiam, 
+                                    eaque ipsa quae ab illo inventore veritatis et quasi 
+                                    architecto beatae vitae dicta sunt explicabo. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer">
+                    <div class="dir_text">
+                        <p>8770 Boehm Divide<br>South Georgia<br>Portland</p>
+                    </div>
+                    <div class="media_social">
+                        <a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="autor">
+                        <p>David Torres | Restaurante 2<br>© Voltage Code | 2019</p>
+                    </div>
+                </div>
+
+                <!-- Pop-Ups -->
+                    <!-- Reservas -->
+                <div class="overlay" id="popup_booking">
+                    <div class="popup" id="popup_book">
+                        <div class="popup_close">
+                            <a id="btn_close_booking" class="btn_close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            <div class="img_popup">
+                                <img src="Img/Voltage_Code.png" alt="">
+                            </div>
+                        </div>
+                        <div class="text_popup">
+                            <h3>En este momento no estamos <br>recibiendo reservas en linea</h3>
+                            <p>Por favor llamanos para continuar con tu reserva<br>+57-(305)-227-2289</p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Compartir -->
+                <div class="overlay" id="popup_share_sm">
+                    <div class="popup" id="popup_share">
+                        <div class="popup_close">
+                            <a id="btn_close_share" class="btn_close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            <div class="links_popup">
+                                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                                <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="text_popup">
+                            <h3>La mala noticia, es que<br> el tiempo vuela</h3>
+                            <p>La buena noticia, es que lo puedes compartir</p>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Contacto -->
+                <div class="overlay" id="popup_send_check">
+                    <div class="popup" id="popup_send">
+                        <div class="popup_close">
+                            <a id="btn_close_send" class="btn_close"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            <div class="img_popup">
+                                <img src="Img/Voltage_Code.png" alt="">
+                            </div>
+                        </div>
+                        <div class="text_popup">
+                            <h3>Envio exitoso</h3>
+                            <p>En breve nos contactaremos contigo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzSYMY-9gm62sxaoQd8XzvHdsHz5soA-E&callback=initMap" async defer></script>
+        <script src='Js/Main.js'></script>
+    </body>
+</html>
